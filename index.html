@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vice City Attorney</title>
-<meta name="description" content="Vice City Attorney. Sharp counsel with a neon edge. Request a confidential consultation.">
+<meta name="description" content="Vice City Attorney. Bad night? I've seen worse. Lawyer up.">
 <meta property="og:title" content="Vice City Attorney">
-<meta property="og:description" content="Sharp counsel with a neon edge. Request a confidential consultation.">
+<meta property="og:description" content="Bad night? I've seen worse. Lawyer up.">
 <meta property="og:image" content="https://vicecity.law/assets/hero.jpg">
 <meta property="og:url" content="https://vicecity.law/">
 <meta name="theme-color" content="#0d0b1f">
@@ -124,7 +124,7 @@
 <header class="nav">
   <div class="wrap">
     <a class="mark" href="#top">V<span>.</span>C<span>.</span>A</a>
-    <a class="nav-cta" href="#consult">Free consultation</a>
+    <a class="nav-cta" href="#consult">Lawyer up</a>
   </div>
 </header>
 
@@ -133,8 +133,8 @@
     <div class="wrap">
       <div class="hero-copy">
         <h1 class="logo">Vice City<span class="logo-sub">ATTORNEY</span></h1>
-        <p class="tagline">Sharp counsel with a neon edge. When the night goes sideways, you need someone in your corner by morning.</p>
-        <a class="btn" href="#consult">Request a consultation <span aria-hidden="true">→</span></a>
+        <p class="tagline">Bad night in Vice City? I've seen worse. Usually by Tuesday.</p>
+        <a class="btn" href="#consult">Call your lawyer <span aria-hidden="true">→</span></a>
       </div>
     </div>
     <a class="scroll-hint" href="#consult">Scroll</a>
@@ -149,9 +149,9 @@
       </figure>
       <div>
         <p class="eyebrow">Your attorney</p>
-        <h2>Dressed for court. <em>Ready for anything.</em></h2>
-        <p class="lede">You get one lawyer who knows your file, picks up the phone, and shows up prepared. No call centers, no hand-offs, no surprises on the bill.</p>
-        <a class="btn" href="#consult">Talk to me today <span aria-hidden="true">→</span></a>
+        <h2>Dressed for court. <em>Parked out front.</em></h2>
+        <p class="lede">Wrong place, wrong time, wrong getaway car. Whatever happened, I'll make it sound a lot better in front of the judge.</p>
+        <a class="btn" href="#consult">Get me out of this <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -159,13 +159,13 @@
   <section class="contact" id="consult">
     <div class="wrap grid">
       <div>
-        <p class="eyebrow">Confidential consultation</p>
-        <h2>Tell us what <em>happened.</em></h2>
-        <p class="lede">Share a few details and we'll get back to you, usually within one business day. Everything you send stays between you and the firm.</p>
+        <p class="eyebrow">Free consultation. Cash preferred.</p>
+        <h2>Tell me what <em>happened.</em></h2>
+        <p class="lede">Leave out the parts you don't want on the record. I'll get back to you before the cops do.</p>
         <ul class="points">
-          <li>Free, no-obligation case review</li>
-          <li>Straight answers in plain English</li>
-          <li>Evening and weekend calls available</li>
+          <li>Wanted level? We'll talk it down.</li>
+          <li>Grand theft auto... allegedly.</li>
+          <li>Open 24/7. Especially 3 a.m.</li>
         </ul>
       </div>
 
@@ -189,22 +189,22 @@
           <label for="matter">Type of matter</label>
           <select id="matter" name="matter" required>
             <option value="" selected disabled>Choose one</option>
-            <option>Criminal defense</option>
-            <option>Personal injury</option>
-            <option>Business / contracts</option>
+            <option>Wanted level problems</option>
+            <option>Vehicle "misunderstanding"</option>
+            <option>Property damage (it was like that already)</option>
             <option>Something else</option>
           </select>
         </div>
         <div class="field">
           <label for="message">Briefly, what's going on?</label>
-          <textarea id="message" name="message" required placeholder="Please avoid sharing sensitive details until we've spoken."></textarea>
+          <textarea id="message" name="message" required placeholder="Start from the beginning. Allegedly."></textarea>
         </div>
         <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label class="check">
           <input type="checkbox" name="acknowledged" value="yes" required>
-          I understand that submitting this form does not create an attorney-client relationship.
+          I understand this is a fictional law firm and nothing here is real legal advice.
         </label>
-        <button class="btn" type="submit">Send request <span aria-hidden="true">→</span></button>
+        <button class="btn" type="submit">Lawyer up <span aria-hidden="true">→</span></button>
         <p class="status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -215,10 +215,10 @@
   <div class="wrap">
     <div class="top">
       <a class="mark" href="#top">Vice City <span>Attorney</span></a>
-      <span>© <span id="yr">2026</span> Vice City Attorney</span>
+      <span>© <span id="yr">2026</span> Vice City Attorney. Fictional, but well dressed.</span>
     </div>
-    <p><strong>Attorney Advertising.</strong> This website is for general information only and is not legal advice. Viewing this site or contacting us does not create an attorney-client relationship. Please do not send confidential information until we have agreed to represent you. Prior results do not guarantee a similar outcome.</p>
-    <p>Not affiliated with, endorsed by, or sponsored by Rockstar Games or Take-Two Interactive. All trademarks belong to their respective owners.</p>
+    <p><strong>Parody site.</strong> Vice City Attorney is a fictional character. This is not a real law firm, nothing here is legal advice, and no attorney-client relationship is created. If you have a real legal problem, talk to a real lawyer.</p>
+    <p>Not affiliated with, endorsed by, or sponsored by any game studio or publisher. All trademarks belong to their respective owners.</p>
   </div>
 </footer>
 
@@ -236,7 +236,7 @@
       return;
     }
     if (form.action.includes('YOUR_FORM_ID')) {
-      status.textContent = 'The form is not connected yet. Please check back soon.';
+      status.textContent = 'The phone's off the hook. Check back soon.';
       status.classList.add('err');
       return;
     }
@@ -245,10 +245,10 @@
       const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       if (!res.ok) throw new Error(res.status);
       form.reset();
-      status.textContent = 'Thanks. Your request is in, and we will be in touch shortly.';
+      status.textContent = 'Got it. Don't talk to anyone until you hear from me.';
       status.classList.add('ok');
     } catch {
-      status.textContent = 'Something went wrong sending your request. Please try again in a moment.';
+      status.textContent = 'That didn't go through. Try again in a minute.';
       status.classList.add('err');
     }
   });
