@@ -58,6 +58,10 @@
   .btn:focus-visible,.nav-cta:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
   .scroll-hint{position:absolute;left:50%;bottom:28px;z-index:2;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);text-decoration:none}
 
+  .badge{display:inline-flex;align-items:center;gap:10px;margin:0 0 26px;padding:8px 16px;border:1px solid rgba(45,226,208,.45);border-radius:999px;background:rgba(13,11,31,.55);font-size:12px;letter-spacing:.08em;color:var(--ink);text-shadow:none;backdrop-filter:blur(6px)}
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);flex:0 0 8px}
+  .licensed{font-style:italic;color:var(--amber)}
+
   /* Neon divider */
   .neon-rule{height:2px;border:0;margin:0;background:linear-gradient(90deg,transparent,var(--pink) 25%,var(--teal) 75%,transparent);box-shadow:0 0 16px var(--pink)}
 
@@ -132,6 +136,7 @@
   <section class="hero" aria-label="Vice City Attorney">
     <div class="wrap">
       <div class="hero-copy">
+        <p class="badge"><span class="dot" aria-hidden="true"></span>Now serving all of Leonida. Open for business starting opening day.</p>
         <h1 class="logo">Vice City<span class="logo-sub">ATTORNEY</span></h1>
         <p class="tagline">Bad night in Vice City? I've seen worse. Usually by Tuesday.</p>
         <a class="btn" href="#consult">Call your lawyer <span aria-hidden="true">→</span></a>
@@ -151,6 +156,7 @@
         <p class="eyebrow">Your attorney</p>
         <h2>You did what? <em>We can work with that.</em></h2>
         <p class="lede">Wrong place, wrong time, wrong getaway car. Whatever happened, I'll make it sound a lot better in front of the judge.</p>
+        <p class="lede licensed">Licensed to practice in Vice City, the Keys, and anywhere the Coast Guard can't hear us.</p>
         <a class="btn" href="#consult">Get me out of this <span aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -166,6 +172,7 @@
           <li>Wanted level? We'll talk it down.</li>
           <li>Grand theft auto... allegedly.</li>
           <li>Open 24/7. Especially 3 a.m.</li>
+          <li>Statewide conspiracy? I do group rates.</li>
         </ul>
       </div>
 
@@ -191,7 +198,10 @@
             <option value="" selected disabled>Choose one</option>
             <option>Wanted level problems</option>
             <option>Vehicle "misunderstanding"</option>
-            <option>Property damage (it was like that already)</option>
+            <option>Leonida Penitentiary (getting out)</option>
+            <option>Shakedown gone wrong</option>
+            <option>Easy score that wasn't easy</option>
+            <option>It went viral (and it shouldn't have)</option>
             <option>Something else</option>
           </select>
         </div>
