@@ -38,10 +38,13 @@
   .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;
     background:url("assets/hero.jpg") 80% 15% / cover no-repeat, var(--night)}
   .hero::before{content:"";position:absolute;inset:0;
-    background:linear-gradient(90deg,var(--night) 0%,rgba(13,11,31,.94) 30%,rgba(13,11,31,.55) 48%,rgba(13,11,31,0) 68%),
-               linear-gradient(0deg,var(--night) 0%,rgba(13,11,31,0) 30%)}
+    background:linear-gradient(90deg,rgba(13,11,31,.85) 0%,rgba(13,11,31,.45) 22%,rgba(13,11,31,0) 42%),
+               linear-gradient(180deg,rgba(13,11,31,.55) 0%,rgba(13,11,31,0) 45%),
+               linear-gradient(0deg,var(--night) 0%,rgba(13,11,31,0) 22%)}
+  .hero{align-items:flex-start}
   .hero .wrap{position:relative;z-index:2;width:100%}
-  .hero-copy{max-width:560px;padding:120px 0 80px}
+  .hero-copy{max-width:560px;padding:clamp(100px,14vh,150px) 0 80px;text-shadow:0 2px 18px rgba(13,11,31,.8)}
+  .tagline{color:#e6dcef}
   .logo{font-family:var(--serif);font-style:italic;font-weight:600;line-height:.9;margin:0;
     font-size:clamp(64px,11vw,132px);letter-spacing:-.02em;
     background:linear-gradient(180deg,#fff6ea 10%,#ffc98f 55%,#ff7fb6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
@@ -101,8 +104,10 @@
   @media (max-width:900px){
     .contact .grid,.about .grid{grid-template-columns:1fr;gap:48px}
     .portrait{max-width:420px}
-    .hero{background-position:88% top}
-    .hero::before{background:linear-gradient(0deg,var(--night) 6%,rgba(13,11,31,.82) 45%,rgba(13,11,31,.35) 100%)}
+    .hero{background:linear-gradient(180deg,var(--night) calc(100% - 84vw),rgba(13,11,31,0) calc(100% - 58vw)),
+      url("assets/hero.jpg") 62% bottom / 150% auto no-repeat, var(--night);padding-bottom:30px}
+    .hero::before{background:linear-gradient(0deg,var(--night) 0%,rgba(13,11,31,0) 8%)}
+    .hero-copy{padding-top:100px}
   }
   @media (max-width:560px){
     .wrap{padding:0 16px}
@@ -140,7 +145,7 @@
   <section class="about" id="about">
     <div class="wrap grid">
       <figure class="portrait">
-        <img src="assets/attorney.jpg" width="460" height="768" alt="Vice City Attorney in a navy three-piece suit holding a briefcase beside a black Lincoln Town Car outside an art deco courthouse at sunset" loading="lazy">
+        <img src="assets/attorney.jpg" width="460" height="768" alt="Vice City Attorney in a navy three-piece suit holding a briefcase outside an art deco courthouse at sunset" loading="lazy">
       </figure>
       <div>
         <p class="eyebrow">Your attorney</p>
