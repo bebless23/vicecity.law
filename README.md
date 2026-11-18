@@ -8,7 +8,7 @@ Static one-page site for **Vice City Attorney**, hosted on GitHub Pages.
 3. In `index.html`, replace `YOUR_FORM_ID` in the `<form action=...>` with it, commit and push.
 
 ## Concept
-In-world parody site for a fictional Vice City lawyer. Keep the parody disclaimer in the footer.
+Two tracks on one page: a fictional Vice City lawyer for game roleplay (the in-game form) and the real attorney section linking to panalawfirm.com. Keep both footer notices; keep jokes out of the real section.
 
 ## Domain
 `CNAME` points Pages at `vicecity.law`. DNS (at your registrar):

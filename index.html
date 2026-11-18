@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vice City Attorney</title>
-<meta name="description" content="Vice City Attorney. Bad night? I've seen worse. Lawyer up.">
+<meta name="description" content="Vice City Attorney: an in-game lawyer for Vice City roleplay, created by Miami attorney Lubomir Panayotov, Esq. of Pana Law Firm, P.A.">
 <meta property="og:title" content="Vice City Attorney">
 <meta property="og:description" content="Bad night? I've seen worse. Lawyer up.">
 <meta property="og:image" content="https://vicecity.law/assets/hero.jpg">
@@ -121,6 +121,33 @@
     .nav-cta{padding:10px 14px;letter-spacing:.14em}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+  /* Two-track additions */
+  .nav-links{display:flex;align-items:center;gap:22px}
+  .nav-link{font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+  .nav-link:hover{color:#fff}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+  .btn-ghost{background:rgba(13,11,31,.55);color:var(--ink);border:1px solid rgba(255,255,255,.4);box-shadow:none;backdrop-filter:blur(6px)}
+  .btn-ghost:hover{border-color:var(--teal);box-shadow:0 0 18px rgba(45,226,208,.35)}
+  .rp-tag{display:inline-block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--night);background:var(--amber);border-radius:6px;padding:3px 8px;margin-right:10px;vertical-align:middle}
+  .real{padding:110px 0;background:linear-gradient(180deg,#120f26,#0f0c22);border-top:1px solid var(--line)}
+  .real .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+  .real h2 em{color:var(--teal)}
+  .real .eyebrow{color:var(--amber)}
+  .practice{list-style:none;padding:0;margin:0 0 32px;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+  .practice li{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .card{border:1px solid var(--line);border-radius:22px;padding:36px;background:rgba(255,255,255,.03)}
+  .card h3{font-family:var(--serif);font-weight:500;font-size:28px;margin:0 0 6px}
+  .card .role{color:var(--muted);margin:0 0 24px;font-size:14px}
+  .card dl{margin:0 0 28px;display:grid;gap:16px}
+  .card dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .card dd{margin:4px 0 0}
+  .card a{color:var(--ink)}
+  .card .btns{display:flex;flex-direction:column;gap:12px}
+  .card .btn{justify-content:center}
+  footer .notice{border-left:2px solid var(--line);padding-left:16px}
+  @media (max-width:900px){.real .grid{grid-template-columns:1fr;gap:40px}}
+  @media (max-width:560px){.practice{grid-template-columns:1fr}.nav-link{display:none}.hero-ctas .btn{width:100%;justify-content:center}.card{padding:26px 20px}}
 </style>
 </head>
 <body>
@@ -128,7 +155,10 @@
 <header class="nav">
   <div class="wrap">
     <a class="mark" href="#top">V<span>.</span>C<span>.</span>A</a>
-    <a class="nav-cta" href="#consult">Lawyer up</a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="nav-link" href="#real">Real legal help</a>
+      <a class="nav-cta" href="#consult">Lawyer up</a>
+    </nav>
   </div>
 </header>
 
@@ -139,10 +169,13 @@
         <p class="badge"><span class="dot" aria-hidden="true"></span>Now serving all of Leonida. Open for business starting opening day.</p>
         <h1 class="logo">Vice City<span class="logo-sub">ATTORNEY</span></h1>
         <p class="tagline">Bad night in Vice City? I've seen worse. Usually by Tuesday.</p>
-        <a class="btn" href="#consult">Call your lawyer <span aria-hidden="true">→</span></a>
+        <div class="hero-ctas">
+          <a class="btn" href="#consult">Hire me in Vice City <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#real">Real legal help in Miami</a>
+        </div>
       </div>
     </div>
-    <a class="scroll-hint" href="#consult">Scroll</a>
+    <a class="scroll-hint" href="#about">Scroll</a>
   </section>
 
   <hr class="neon-rule">
@@ -153,9 +186,9 @@
         <img src="assets/attorney.jpg" width="500" height="637" alt="Vice City Attorney in a navy three-piece suit, arms folded, leaning against a black Lincoln Town Car outside an art deco courthouse at sunset" loading="lazy">
       </figure>
       <div>
-        <p class="eyebrow">Your attorney</p>
+        <p class="eyebrow"><span class="rp-tag">Roleplay</span>Your in-game attorney</p>
         <h2>You did what? <em>We can work with that.</em></h2>
-        <p class="lede">Wrong place, wrong time, wrong getaway car. Whatever happened, I'll make it sound a lot better in front of the judge.</p>
+        <p class="lede">Wrong place, wrong time, wrong getaway car. Whatever happened in Vice City, I'll make it sound a lot better in front of the judge.</p>
         <p class="lede licensed">Licensed to practice in Vice City, the Keys, and anywhere the Coast Guard can't hear us.</p>
         <a class="btn" href="#consult">Get me out of this <span aria-hidden="true">→</span></a>
       </div>
@@ -165,9 +198,9 @@
   <section class="contact" id="consult">
     <div class="wrap grid">
       <div>
-        <p class="eyebrow">Free consultation. Cash preferred.</p>
+        <p class="eyebrow"><span class="rp-tag">Roleplay</span>In-game booking. Cash preferred.</p>
         <h2>Tell me what <em>happened.</em></h2>
-        <p class="lede">Leave out the parts you don't want on the record. I'll get back to you before the cops do.</p>
+        <p class="lede">Running a roleplay server or got your character in trouble? Book Vice City Attorney for your arrest, trial or courtroom scene. Leave out the parts you don't want on the record.</p>
         <ul class="points">
           <li>Wanted level? We'll talk it down.</li>
           <li>Grand theft auto... allegedly.</li>
@@ -178,19 +211,20 @@
 
       <!-- Replace YOUR_FORM_ID with your Formspree form ID (see README.md). -->
       <form id="consult-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Vice City Attorney: in-game booking">
         <div class="row">
           <div class="field">
-            <label for="name">Full name</label>
-            <input id="name" name="name" autocomplete="name" required>
+            <label for="name">Character name</label>
+            <input id="name" name="character" required>
           </div>
           <div class="field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
+            <label for="server">Server</label>
+            <input id="server" name="server" placeholder="Server name">
           </div>
         </div>
         <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+          <label for="email">Email or Discord</label>
+          <input id="email" name="contact" autocomplete="email" required>
         </div>
         <div class="field">
           <label for="matter">Type of matter</label>
@@ -206,17 +240,47 @@
           </select>
         </div>
         <div class="field">
-          <label for="message">Briefly, what's going on?</label>
+          <label for="message">Briefly, what's going on in-game?</label>
           <textarea id="message" name="message" required placeholder="Start from the beginning. Allegedly."></textarea>
         </div>
         <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label class="check">
           <input type="checkbox" name="acknowledged" value="yes" required>
-          I understand this is a fictional law firm and nothing here is real legal advice.
+          I understand this is a fictional roleplay character for video game servers, not real legal services. For a real legal matter I'll contact Pana Law Firm.
         </label>
         <button class="btn" type="submit">Lawyer up <span aria-hidden="true">→</span></button>
         <p class="status" id="form-status" role="status" aria-live="polite"></p>
       </form>
+    </div>
+  </section>
+
+  <section class="real" id="real">
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow">Real legal help</p>
+        <h2>The real attorney <em>behind the suit.</em></h2>
+        <p class="lede">Vice City Attorney is a roleplay character created by Lubomir Panayotov, Esq., founder of Pana Law Firm, P.A. and a member of The Florida Bar, based in Miami. Real legal matters are handled only through Pana Law Firm, never through the in-game form above.</p>
+        <ul class="practice">
+          <li>Tax law</li>
+          <li>Crypto &amp; blockchain</li>
+          <li>Meme coin projects &amp; disputes</li>
+          <li>Trusts &amp; estates</li>
+          <li>Entity formation</li>
+          <li>Frozen assets &amp; recovery</li>
+        </ul>
+      </div>
+      <aside class="card" aria-label="Pana Law Firm contact">
+        <h3>Lubomir Panayotov, Esq.</h3>
+        <p class="role">Pana Law Firm, P.A. · Licensed in Florida</p>
+        <dl>
+          <div><dt>Office</dt><dd>One Biscayne Tower<br>2 S. Biscayne Blvd, Suite 2730<br>Miami, FL 33131</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+13054650281">305-465-0281</a></dd></div>
+        </dl>
+        <div class="btns">
+          <a class="btn" href="https://panalawfirm.com/schedule" rel="noopener">Schedule a consultation <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://panalawfirm.com" rel="noopener">Visit panalawfirm.com</a>
+        </div>
+      </aside>
     </div>
   </section>
 </main>
@@ -225,10 +289,10 @@
   <div class="wrap">
     <div class="top">
       <a class="mark" href="#top">Vice City <span>Attorney</span></a>
-      <span>© <span id="yr">2026</span> Vice City Attorney. Fictional, but well dressed.</span>
+      <span>© <span id="yr">2026</span> Pana Law Firm, P.A.</span>
     </div>
-    <p><strong>Parody site.</strong> Vice City Attorney is a fictional character. This is not a real law firm, nothing here is legal advice, and no attorney-client relationship is created. If you have a real legal problem, talk to a real lawyer.</p>
-    <p>Not affiliated with, endorsed by, or sponsored by any game studio or publisher. All trademarks belong to their respective owners.</p>
+    <p class="notice"><strong>Roleplay character.</strong> Vice City Attorney and everything in the "Roleplay" sections of this site are fictional and for video game roleplay only. They are not legal services, not legal advice, and do not create an attorney-client relationship. Not affiliated with, endorsed by, or sponsored by any game studio or publisher. All trademarks belong to their respective owners.</p>
+    <p class="notice"><strong>Attorney information.</strong> Lubomir Panayotov, Esq., Pana Law Firm, P.A., One Biscayne Tower, 2 S. Biscayne Blvd, Suite 2730, Miami, FL 33131. Licensed in Florida. This website is for general information only and is not legal advice. Contacting the firm does not create an attorney-client relationship; please do not send confidential information until representation is agreed in writing. The hiring of a lawyer is an important decision that should not be based solely upon advertisements.</p>
   </div>
 </footer>
 
@@ -240,25 +304,25 @@
     e.preventDefault();
     status.className = 'status';
     if (!form.checkValidity()) {
-      status.textContent = 'Please fill in your name, email, matter type and message, and tick the acknowledgement.';
+      status.textContent = "Fill in your character name, contact, matter and what happened, and tick the box.";
       status.classList.add('err');
       form.reportValidity();
       return;
     }
     if (form.action.includes('YOUR_FORM_ID')) {
-      status.textContent = 'The phone's off the hook. Check back soon.';
+      status.textContent = "The phone's off the hook. Check back soon.";
       status.classList.add('err');
       return;
     }
-    status.textContent = 'Sending…';
+    status.textContent = "Sending…";
     try {
       const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       if (!res.ok) throw new Error(res.status);
       form.reset();
-      status.textContent = 'Got it. Don't talk to anyone until you hear from me.';
+      status.textContent = "Got it. Don't talk to anyone until you hear from me.";
       status.classList.add('ok');
     } catch {
-      status.textContent = 'That didn't go through. Try again in a minute.';
+      status.textContent = "That didn't go through. Try again in a minute.";
       status.classList.add('err');
     }
   });
