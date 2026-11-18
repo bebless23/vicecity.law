@@ -58,8 +58,16 @@
   /* Neon divider */
   .neon-rule{height:2px;border:0;margin:0;background:linear-gradient(90deg,transparent,var(--pink) 25%,var(--teal) 75%,transparent);box-shadow:0 0 16px var(--pink)}
 
+  /* About */
+  .about{padding:110px 0 40px;background:radial-gradient(900px 600px at 15% 30%,rgba(255,79,163,.14),transparent 60%),var(--night)}
+  .about .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+  .portrait{margin:0;position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 0 0 1px rgba(255,79,163,.25),0 30px 80px -20px rgba(255,79,163,.45),0 0 60px -10px rgba(45,226,208,.25)}
+  .portrait img{display:block;width:100%;height:auto}
+  .portrait::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(0deg,rgba(13,11,31,.6),transparent)}
+
   /* Contact */
-  .contact{padding:110px 0 120px;background:radial-gradient(1000px 500px at 85% 0%,rgba(255,79,163,.12),transparent 60%),radial-gradient(800px 500px at 0% 100%,rgba(45,226,208,.08),transparent 60%),var(--night)}
+  .contact{padding:90px 0 120px;background:radial-gradient(1000px 500px at 85% 0%,rgba(255,79,163,.12),transparent 60%),radial-gradient(800px 500px at 0% 100%,rgba(45,226,208,.08),transparent 60%),var(--night)}
   .contact .grid{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:start}
   .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);margin:0 0 18px}
   h2{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5vw,58px);line-height:1.05;margin:0 0 24px}
@@ -91,7 +99,8 @@
   footer strong{color:var(--ink);font-weight:600}
 
   @media (max-width:900px){
-    .contact .grid{grid-template-columns:1fr;gap:48px}
+    .contact .grid,.about .grid{grid-template-columns:1fr;gap:48px}
+    .portrait{max-width:420px}
     .hero{background-position:68% center}
     .hero::before{background:linear-gradient(0deg,var(--night) 6%,rgba(13,11,31,.82) 45%,rgba(13,11,31,.35) 100%)}
   }
@@ -127,6 +136,20 @@
   </section>
 
   <hr class="neon-rule">
+
+  <section class="about" id="about">
+    <div class="wrap grid">
+      <figure class="portrait">
+        <img src="assets/attorney.jpg" width="720" height="941" alt="Vice City Attorney in a navy three-piece suit holding a briefcase outside an art deco courthouse at sunset" loading="lazy">
+      </figure>
+      <div>
+        <p class="eyebrow">Your attorney</p>
+        <h2>Dressed for court. <em>Ready for anything.</em></h2>
+        <p class="lede">You get one lawyer who knows your file, picks up the phone, and shows up prepared. No call centers, no hand-offs, no surprises on the bill.</p>
+        <a class="btn" href="#consult">Talk to me today <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
 
   <section class="contact" id="consult">
     <div class="wrap grid">
