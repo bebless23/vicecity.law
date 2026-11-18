@@ -36,7 +36,7 @@
 
   /* Hero */
   .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;
-    background:url("assets/hero.jpg") 72% center / cover no-repeat, var(--night)}
+    background:url("assets/hero.jpg") 80% 15% / cover no-repeat, var(--night)}
   .hero::before{content:"";position:absolute;inset:0;
     background:linear-gradient(90deg,var(--night) 0%,rgba(13,11,31,.94) 30%,rgba(13,11,31,.55) 48%,rgba(13,11,31,0) 68%),
                linear-gradient(0deg,var(--night) 0%,rgba(13,11,31,0) 30%)}
@@ -60,7 +60,7 @@
 
   /* About */
   .about{padding:110px 0 40px;background:radial-gradient(900px 600px at 15% 30%,rgba(255,79,163,.14),transparent 60%),var(--night)}
-  .about .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+  .about .grid{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:72px;align-items:center}
   .portrait{margin:0;position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);
     box-shadow:0 0 0 1px rgba(255,79,163,.25),0 30px 80px -20px rgba(255,79,163,.45),0 0 60px -10px rgba(45,226,208,.25)}
   .portrait img{display:block;width:100%;height:auto}
@@ -101,7 +101,7 @@
   @media (max-width:900px){
     .contact .grid,.about .grid{grid-template-columns:1fr;gap:48px}
     .portrait{max-width:420px}
-    .hero{background-position:68% center}
+    .hero{background-position:88% top}
     .hero::before{background:linear-gradient(0deg,var(--night) 6%,rgba(13,11,31,.82) 45%,rgba(13,11,31,.35) 100%)}
   }
   @media (max-width:560px){
@@ -140,7 +140,7 @@
   <section class="about" id="about">
     <div class="wrap grid">
       <figure class="portrait">
-        <img src="assets/attorney.jpg" width="720" height="941" alt="Vice City Attorney in a navy three-piece suit holding a briefcase outside an art deco courthouse at sunset" loading="lazy">
+        <img src="assets/attorney.jpg" width="460" height="768" alt="Vice City Attorney in a navy three-piece suit holding a briefcase beside a black Lincoln Town Car outside an art deco courthouse at sunset" loading="lazy">
       </figure>
       <div>
         <p class="eyebrow">Your attorney</p>
